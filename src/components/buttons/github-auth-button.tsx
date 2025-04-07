@@ -37,7 +37,7 @@ export default function GithubAuthButton({ className }: GithubAuthButtonProps) {
 
     return (
         <Button
-            className={cn('cursor-pointer rounded-full bg-white', className)}
+            className={cn('cursor-pointer rounded-full border bg-white', className)}
             type='button'
             onClick={handleLogin}
             size='lg'
