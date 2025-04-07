@@ -1,5 +1,10 @@
 # Cometa Code Challenge - Beer Market
 
+## Screenshots
+![Página principal](/public/screenshots/sreenshot.png)
+
+## Overview
+[Live demo](https://www.youtube.com/watch?v=your_video_id)
 This is a coding challenge in which I developed a beer marketplace app that displays a list of beers and offers features such as filtering, searching, creating orders with different rounds, and the option to mark an order as paid.
 
 Additionally, I implemented a basic login system using Firebase and simple middleware for superficial verification, providing a more complete experience, simulating a real app. The project is designed exclusively for mobile devices.
@@ -15,7 +20,6 @@ One of the challenges I faced, which I couldn't implement but would be a great i
 - 📊 **TypeScript** - Type safety for your codebase
 - 🔄 **Zustand** - Simple state management
 - 🔐 **Firebase Integration** - Authentication and database
-- 📝 **React Hook Form** - Form validation with Zod
 - 📱 **Responsive Design** - Mobile-first approach
 
 ## Project Structure
@@ -35,12 +39,10 @@ src/
 ├── shadcn/            # Shadcn UI components
 │   ├── button/        # Button component
 │   ├── card/          # Card component
-│   ├── input/         # Input component
 │   └── ...
 ├── lib/               # Utility functions, hooks, etc.
 │   ├── constants/     # Application constants
 │   ├── providers/     # Context providers or wrappers
-│   ├── schemas/       # Zod schemas for validation
 │   ├── types/         # TypeScript types and interfaces
 │   └── utils.ts       # Utility functions
 ├── services/          # Firebase services
@@ -114,8 +116,6 @@ This project uses various libraries including:
 - **Shadcn UI**: Component library
 - **Firebase 11**: Authentication and backend services
 - **Zustand 5**: State management
-- **React Hook Form 7**: Form handling
-- **Zod 3**: Schema validation
 - **Sonner 2**: Toast notifications
 - **Auto-animate**: Animation library
 
