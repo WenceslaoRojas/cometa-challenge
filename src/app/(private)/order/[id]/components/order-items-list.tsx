@@ -1,5 +1,8 @@
 import { useId } from 'react';
 
+import Link from 'next/link';
+
+import { ROUTES } from '@/lib/constants/routes.constants';
 import { Order } from '@/lib/types/beer.types';
 import { formatCurrency, getItemPrice } from '@/lib/utils';
 import { Separator } from '@/shadcn/separator';
@@ -31,7 +34,10 @@ export default function OrderItemsList({ order }: OrderItemsListProps) {
 
                     return (
                         <li key={useId()} className='rounded-md border p-4'>
-                            <div className='flex flex-row items-center space-x-4'>
+                            <Link
+                                href={ROUTES.PRIVATE.BEER(item.beer.id)}
+                                title='View Beer'
+                                className='flex flex-row items-center space-x-4'>
                                 <div className='relative h-16 w-16 flex-shrink-0'>
                                     <img
                                         src={item.beer.image}
@@ -57,7 +63,7 @@ export default function OrderItemsList({ order }: OrderItemsListProps) {
                                     )}
                                     <p className='font-semibold'>Total: {formatCurrency(total)}</p>
                                 </div>
-                            </div>
+                            </Link>
                         </li>
                     );
                 })}

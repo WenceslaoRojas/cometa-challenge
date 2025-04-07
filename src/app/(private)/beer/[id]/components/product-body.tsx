@@ -96,7 +96,7 @@ export default function ProductBody({ beer, stock: initialStock }: ProductBodyPr
     }, [beer, orderCount, user.uid, loading]);
 
     return (
-        <div className='absolute inset-x-0 bottom-0 z-20 flex h-[40vh] w-full flex-col justify-between space-y-6 rounded-t-2xl bg-white p-4 pt-8'>
+        <div className='ob-4 absolute inset-x-0 bottom-0 z-20 flex h-[50vh] w-full flex-col justify-between space-y-6 rounded-t-2xl bg-white p-4 pt-8'>
             <div className='flex w-full items-center justify-between'>
                 <div className='flex flex-col space-y-2'>
                     <h1 className='text-black'>{beer.name}</h1>

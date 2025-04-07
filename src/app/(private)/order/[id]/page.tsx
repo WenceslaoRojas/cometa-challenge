@@ -10,7 +10,7 @@ export default async function OrderPage({ params }: OrderPageProps) {
     const { id } = await params;
 
     return (
-        <main className='space-y-6 px-6 py-6'>
+        <main className='space-y-6 px-6 pt-6 pb-10'>
             <OrderHeader />
             <OrderClientContainer orderId={id} />
             <BottomNav />

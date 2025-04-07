@@ -9,7 +9,7 @@ export default async function BeerPage(props: BeerPageProps) {
     const { id } = await props.params;
 
     return (
-        <main className=''>
+        <main>
             <BackButton className='absolute top-6 left-4 z-20' />
             <BeerClientContainer beerId={id} />
         </main>
