@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { ROUTES } from '@/lib/constants/routes.constants';
 import { Order } from '@/lib/types/beer.types';
-import { cn } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 import { ArticleCard } from '@/shadcn/card';
 import { Skeleton } from '@/shadcn/skeleton';
 
@@ -26,10 +26,7 @@ export default function OrderCard({ order }: OrderCardProps) {
                     <div>
                         <h3 className='text-base font-normal'>{order.items[0].beer.name}</h3>
                         <p className='text-secondary text-xs font-light'>
-                            {`${order.items.length} beers - ${order.subtotal.toLocaleString('en-US', {
-                                style: 'currency',
-                                currency: 'USD'
-                            })}`}
+                            {`${order.items.length} rounds - ${formatCurrency(order.subtotal)}`}
                         </p>
                     </div>
                 </div>

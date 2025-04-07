@@ -52,9 +52,9 @@ export default function DummyMiddlewareProvider({ children }: DummyMiddlewarePro
 
     if (verifyingUser) {
         return (
-            <div className='flex h-screen w-screen flex-col items-center justify-center gap-72'>
-                <h1 className='mb-4 text-3xl font-bold text-black'>{APP_NAME}</h1>
-                <BartenderSVG className='absolute top-1/2 left-1/2 -z-10 size-2/3 -translate-x-1/2 -translate-y-1/2' />
+            <div className='mx-auto flex h-screen max-h-screen min-h-screen w-screen max-w-md flex-col items-center justify-center text-black'>
+                <h1 className='mb-4 text-3xl font-bold'>{APP_NAME}</h1>
+                <BartenderSVG className='h-2/3 w-2/3' />
                 <p className='text-center'>Let me get you a drink while we review your session.</p>
             </div>
         );
