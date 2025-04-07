@@ -10,19 +10,19 @@ interface OrderListProps {
 export default function OrderList({ orders, loading }: OrderListProps) {
     const [parent] = useAutoAnimate();
 
-    if (loading) {
+    if (orders.length === 0 && !loading) {
         return (
             <div className='mt-4 flex flex-col space-y-6 overflow-y-auto'>
-                {new Array(5).fill(0).map((_, index) => (
-                    <OrderCardSkeleton key={index} />
-                ))}
+                <NoOrders />
             </div>
         );
     }
 
     return (
         <div ref={parent} className='mt-4 flex flex-col space-y-6 overflow-y-auto'>
-            {orders.length === 0 ? <NoOrders /> : orders.map((order) => <OrderCard key={order.id} order={order} />)}
+            {loading
+                ? new Array(5).fill(0).map((_, index) => <OrderCardSkeleton key={index} />)
+                : orders.map((order) => <OrderCard key={order.id} order={order} />)}
         </div>
     );
 }
